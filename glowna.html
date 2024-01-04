@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Strona o Peptydach</title>
+	
+	<link rel="stylesheet" type="text/css" href="style 02.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="glowna2">Peptydy: Związki Chemiczne i Ich Zastosowania</h1>
+			
+    </header>
+	<nav  class="gog">
+	<ul>
+			<li><a href="#1">Definicja</a></li>
+			<li><a href="#2">Wybrane peptydy</a></li>
+			<li><a href="#3">Galeria</a></li>
+	</ul>
+	</nav>
+
+    <section id="1">
+        <p class="glowna">Peptydy są to krótkie łańcuchy aminokwasów, które stanowią organiczne związki chemiczne. Są one zbudowane z dwóch lub więcej połączonych ze sobą aminokwasów poprzez wiązania peptydowe. Aminokwasy to podstawowe jednostki strukturalne białek, a peptydy są rodzajem prekursorów białek.</p>
+
+        <p class="glowna">Istnieje wiele różnych rodzajów peptydów, w tym te, które pełnią funkcje w organizmach żywych, takie jak hormony, neurotransmitery czy peptydy antybakteryjne. Peptydy odgrywają także istotną rolę w dziedzinie kosmetologii, gdzie są wykorzystywane do poprawy kondycji skóry i przeciwdziałania procesom starzenia.</p>
+
+        <p class="glowna">W kontekście kosmetyki, peptydy mogą działać na różne sposoby, takie jak stymulowanie produkcji kolagenu, poprawa elastyczności skóry, redukcja zmarszczek czy nawilżanie. Te właściwości sprawiają, że peptydy są popularnym składnikiem wielu produktów do pielęgnacji skóry.</p>
+ </section>
+<section id="2">
+        <p class="glowna">Na tej stronie przedstawiam 7 moich ulubionych peptydów, jakimi są:</p>
+		 <ul class="glowna3">
+            <li>Hexanoyl dipeptide-3</li>
+            <li>Matrixyl 3000</li>
+            <li>Tripeptyd Miedziowy</li>
+            <li>Argirelina</li>
+            <li>Palmitoyl Tripeptide-38</li>
+			<li>Dermaxyl</li>
+            <li>Czynnik wzrostu EGF</li>
+        </ul>
+   </section>
+	<br>
+	<section id="3">
+	  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="foto/foto01.jpg" style="width:100%">
+    <div class="text">Peptydy</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="foto/foto02.jpg" style="width:100%">
+    <div class="text">Peptydy</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="foto/foto03.jpg" style="width:100%">
+    <div class="text">Peptydy</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+</section>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+</body>
+</html>
